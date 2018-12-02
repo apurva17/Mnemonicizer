@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ListMe"
+            android:name=".MainActivity"
             android:label="Mnemonicizer"
 
             >
@@ -23,6 +23,9 @@
         <activity android:name=".Detail"
             android:label="Mnemonicizer"/>
         <activity android:name=".AndroidThread"/>
+
+        <activity android:name=".ListMe"
+           />
 
     </application>
 

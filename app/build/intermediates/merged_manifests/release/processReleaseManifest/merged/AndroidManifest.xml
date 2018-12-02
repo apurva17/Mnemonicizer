@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.vonkdothuser11.meanings"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="23" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Mnemonicizer"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.vonkdothuser11.meanings.MainActivity"
+            android:label="Mnemonicizer" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.vonkdothuser11.meanings.Detail"
+            android:label="Mnemonicizer" />
+        <activity android:name="com.example.vonkdothuser11.meanings.AndroidThread" />
+        <activity android:name="com.example.vonkdothuser11.meanings.ListMe" />
+    </application>
+
+</manifest>

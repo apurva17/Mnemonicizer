@@ -27,13 +27,13 @@ public class DBHelper extends SQLiteOpenHelper {
         super(context, DB_NAME, null, 1);
         this.context = context;
         // DB_PATH= context.getDatabasePath("").getPath();
-        // Log.d("path",""+DB_PATH);
+        Log.d("path",""+DB_PATH);
         DB_PATH = "/data/data/" + context.getPackageName() + "/" + "databases/";
     }
 
     public void createDataBase() throws IOException {
 
-        boolean dbExist = checkDataBase();
+        boolean dbExist = false;
         if (dbExist) {
 
         } else {
@@ -84,6 +84,11 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // TODO Auto-generated method stub
+        try {
+            copyDataBase();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     public JSONArray getData() {
         int totalColumn = 0;
